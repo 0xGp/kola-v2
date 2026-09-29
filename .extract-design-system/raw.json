@@ -1,0 +1,792 @@
+{
+  "url": "https://augen.pro/",
+  "extractedAt": "2026-09-29T18:53:18.095Z",
+  "siteName": null,
+  "logo": {
+    "source": "svg",
+    "url": "https://augen.pro/",
+    "width": 55,
+    "height": 15,
+    "safeZone": {
+      "top": 0,
+      "right": 0,
+      "bottom": 0,
+      "left": 0
+    },
+    "background": "rgb(253, 253, 253)"
+  },
+  "favicons": [
+    {
+      "type": "apple-touch-icon",
+      "url": "https://augen.pro/favicon/apple-touch-icon.png",
+      "sizes": "180x180"
+    },
+    {
+      "type": "icon",
+      "url": "https://augen.pro/favicon/favicon-32x32.png",
+      "sizes": "32x32"
+    },
+    {
+      "type": "icon",
+      "url": "https://augen.pro/favicon/favicon-16x16.png",
+      "sizes": "16x16"
+    },
+    {
+      "type": "apple-touch-icon",
+      "url": "https://augen.pro/favicon/apple-touch-icon.png",
+      "sizes": "180x180"
+    },
+    {
+      "type": "og:image",
+      "url": "https://a.storyblok.com/f/274239/1200x630/8129f8782c/og-img-other-pages.png",
+      "sizes": null
+    },
+    {
+      "type": "favicon.ico",
+      "url": "https://augen.pro/favicon.ico",
+      "sizes": null
+    }
+  ],
+  "colors": {
+    "semantic": {},
+    "palette": [
+      {
+        "color": "rgb(15, 16, 18)",
+        "normalized": "#0f1012",
+        "count": 246,
+        "confidence": "high",
+        "sources": [
+          "router-link-active",
+          "nav-list-item-link",
+          "home-hero"
+        ],
+        "lch": "lch(4.66% 1.21 272.32)",
+        "oklch": "oklch(17.28% 0.004 264.45)"
+      },
+      {
+        "color": "rgb(0, 113, 227)",
+        "normalized": "#0071e3",
+        "count": 126,
+        "confidence": "high",
+        "sources": [
+          "link-icon-wrapper",
+          "arrow-link"
+        ],
+        "lch": "lch(48.7% 67.32 284.92)",
+        "oklch": "oklch(56.29% 0.193 256.16)"
+      },
+      {
+        "color": "rgb(94, 94, 94)",
+        "normalized": "#5e5e5e",
+        "count": 14,
+        "confidence": "medium",
+        "sources": [],
+        "lch": "lch(39.9% 0 158.2)",
+        "oklch": "oklch(48.19% 0 89.88)"
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.1)",
+        "normalized": "#ffffff",
+        "count": 8,
+        "confidence": "medium",
+        "sources": [],
+        "lch": "lch(100% 0 158.2)",
+        "oklch": "oklch(100% 0 89.88)"
+      }
+    ],
+    "cssVariables": {
+      "--color-green": {
+        "value": "#00b982",
+        "lch": "lch(66.75% 55.32 162.07)",
+        "oklch": "oklch(69.52% 0.15 163.21)"
+      },
+      "--color-white": {
+        "value": "#fff",
+        "lch": "lch(100% 0 158.2)",
+        "oklch": "oklch(100% 0 89.88)"
+      },
+      "--color-yellow": {
+        "value": "#fca311",
+        "lch": "lch(74.15% 79.81 72.6)",
+        "oklch": "oklch(78.59% 0.167 70.04)"
+      },
+      "--color-orange": {
+        "value": "#ff5102",
+        "lch": "lch(59.12% 94.05 47.46)",
+        "oklch": "oklch(67.17% 0.22 37.76)"
+      },
+      "--color-black": {
+        "value": "#000",
+        "lch": "lch(0% 0 0)",
+        "oklch": "oklch(0% 0 0)"
+      }
+    },
+    "_raw": [
+      {
+        "color": "rgb(0, 0, 0)",
+        "normalized": "#000000",
+        "count": 6
+      },
+      {
+        "color": "rgb(15, 16, 18)",
+        "normalized": "#0f1012",
+        "count": 246
+      },
+      {
+        "color": "rgb(242, 242, 244)",
+        "normalized": "#f2f2f4",
+        "count": 397
+      },
+      {
+        "color": "rgb(0, 113, 227)",
+        "normalized": "#0071e3",
+        "count": 126
+      },
+      {
+        "color": "rgb(2, 2, 1)",
+        "normalized": "#020201",
+        "count": 10
+      },
+      {
+        "color": "rgba(255, 255, 255, 0.1)",
+        "normalized": "#ffffff",
+        "count": 8
+      },
+      {
+        "color": "rgb(94, 94, 94)",
+        "normalized": "#5e5e5e",
+        "count": 14
+      }
+    ]
+  },
+  "typography": {
+    "styles": [
+      {
+        "context": "heading-1",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "186.667px (11.67rem)",
+        "weight": 300,
+        "lineHeight": "1.20",
+        "spacing": "1.49333px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "38px (2.38rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.76px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "27px (1.69rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.54px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "27px (1.69rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.54px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "20px (1.25rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.4px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "20px (1.25rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.4px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "18px (1.13rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.36px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "16px (1.00rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.32px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "16px (1.00rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.32px",
+        "transform": null
+      },
+      {
+        "context": "heading-1",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "16px (1.00rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.32px",
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "14px (0.88rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.28px",
+        "transform": null
+      },
+      {
+        "context": "button",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "13.3333px (0.83rem)",
+        "weight": 400,
+        "lineHeight": null,
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "13.3333px (0.83rem)",
+        "weight": 400,
+        "lineHeight": null,
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "12px (0.75rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.24px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "12px (0.75rem)",
+        "weight": 350,
+        "lineHeight": "1.20",
+        "spacing": "-0.24px",
+        "transform": null
+      },
+      {
+        "context": "link",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "10px (0.63rem)",
+        "weight": 350,
+        "lineHeight": null,
+        "spacing": null,
+        "transform": null
+      },
+      {
+        "context": "caption",
+        "family": "PP Neue Montreal",
+        "fallbacks": null,
+        "size": "10px (0.63rem)",
+        "weight": 350,
+        "lineHeight": null,
+        "spacing": null,
+        "transform": null
+      }
+    ],
+    "sources": {
+      "googleFonts": [],
+      "adobeFonts": false,
+      "variableFonts": false
+    }
+  },
+  "spacing": {
+    "scaleType": "8px",
+    "commonValues": [
+      {
+        "px": "1px",
+        "rem": "0.06rem",
+        "count": 2,
+        "numericValue": 1
+      },
+      {
+        "px": "2.1px",
+        "rem": "0.13rem",
+        "count": 5,
+        "numericValue": 2.1
+      },
+      {
+        "px": "3.6px",
+        "rem": "0.23rem",
+        "count": 5,
+        "numericValue": 3.6
+      },
+      {
+        "px": "4px",
+        "rem": "0.25rem",
+        "count": 2,
+        "numericValue": 4
+      },
+      {
+        "px": "8px",
+        "rem": "0.50rem",
+        "count": 8,
+        "numericValue": 8
+      },
+      {
+        "px": "10px",
+        "rem": "0.63rem",
+        "count": 10,
+        "numericValue": 10
+      },
+      {
+        "px": "20px",
+        "rem": "1.25rem",
+        "count": 7,
+        "numericValue": 20
+      },
+      {
+        "px": "21px",
+        "rem": "1.31rem",
+        "count": 2,
+        "numericValue": 21
+      },
+      {
+        "px": "22px",
+        "rem": "1.38rem",
+        "count": 2,
+        "numericValue": 22
+      },
+      {
+        "px": "25px",
+        "rem": "1.56rem",
+        "count": 1,
+        "numericValue": 25
+      },
+      {
+        "px": "28px",
+        "rem": "1.75rem",
+        "count": 4,
+        "numericValue": 28
+      },
+      {
+        "px": "30px",
+        "rem": "1.88rem",
+        "count": 5,
+        "numericValue": 30
+      },
+      {
+        "px": "34px",
+        "rem": "2.13rem",
+        "count": 2,
+        "numericValue": 34
+      },
+      {
+        "px": "36px",
+        "rem": "2.25rem",
+        "count": 2,
+        "numericValue": 36
+      },
+      {
+        "px": "93.3333px",
+        "rem": "5.83rem",
+        "count": 2,
+        "numericValue": 93.3333
+      },
+      {
+        "px": "94px",
+        "rem": "5.88rem",
+        "count": 1,
+        "numericValue": 94
+      },
+      {
+        "px": "150.667px",
+        "rem": "9.42rem",
+        "count": 2,
+        "numericValue": 150.667
+      },
+      {
+        "px": "173.333px",
+        "rem": "10.83rem",
+        "count": 3,
+        "numericValue": 173.333
+      },
+      {
+        "px": "192px",
+        "rem": "12.00rem",
+        "count": 3,
+        "numericValue": 192
+      },
+      {
+        "px": "293.333px",
+        "rem": "18.33rem",
+        "count": 2,
+        "numericValue": 293.333
+      }
+    ]
+  },
+  "borderRadius": {
+    "values": [
+      {
+        "value": "1.5px",
+        "count": 1,
+        "elements": [
+          "Scroll to top"
+        ],
+        "confidence": "low",
+        "numericValue": 1.5
+      },
+      {
+        "value": "1.8px",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low",
+        "numericValue": 1.8
+      },
+      {
+        "value": "10px",
+        "count": 11,
+        "elements": [
+          "ul",
+          "div",
+          "a",
+          "Toggle menu"
+        ],
+        "confidence": "high",
+        "numericValue": 10
+      },
+      {
+        "value": "26px",
+        "count": 1,
+        "elements": [
+          "Scroll to the next section"
+        ],
+        "confidence": "low",
+        "numericValue": 26
+      },
+      {
+        "value": "54px",
+        "count": 5,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium",
+        "numericValue": 54
+      },
+      {
+        "value": "63px",
+        "count": 11,
+        "elements": [
+          "span"
+        ],
+        "confidence": "high",
+        "numericValue": 63
+      },
+      {
+        "value": "94px",
+        "count": 6,
+        "elements": [
+          "span"
+        ],
+        "confidence": "medium",
+        "numericValue": 94
+      },
+      {
+        "value": "50%",
+        "count": 1,
+        "elements": [
+          "Go to homepage"
+        ],
+        "confidence": "low",
+        "numericValue": 50
+      }
+    ]
+  },
+  "borders": {
+    "combinations": [
+      {
+        "width": "1px",
+        "style": "solid",
+        "color": "rgb(0, 113, 227)",
+        "count": 17,
+        "elements": [
+          "span",
+          "div"
+        ],
+        "confidence": "high"
+      },
+      {
+        "width": "0px 0px 1px",
+        "style": "none none solid",
+        "color": "rgb(15, 16, 18)",
+        "count": 4,
+        "elements": [
+          "div"
+        ],
+        "confidence": "medium"
+      },
+      {
+        "width": "1px",
+        "style": "solid",
+        "color": "rgb(15, 16, 18)",
+        "count": 3,
+        "elements": [
+          "span"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "0px 0px 1px",
+        "style": "none none solid",
+        "color": "rgba(15, 16, 18, 0.2)",
+        "count": 1,
+        "elements": [
+          "div"
+        ],
+        "confidence": "low"
+      },
+      {
+        "width": "1px",
+        "style": "solid",
+        "color": "rgb(242, 242, 244)",
+        "count": 1,
+        "elements": [
+          "span"
+        ],
+        "confidence": "low"
+      }
+    ]
+  },
+  "shadows": [],
+  "components": {
+    "buttons": [
+      {
+        "states": {
+          "default": {
+            "backgroundColor": "rgba(12, 13, 15, 0.05)",
+            "color": "rgb(2, 2, 1)",
+            "padding": "0px",
+            "borderRadius": "26px",
+            "border": "0px none rgb(2, 2, 1)",
+            "boxShadow": "none",
+            "outline": "rgb(2, 2, 1) none 3px",
+            "transform": "matrix(1, 0, 0, 1, 0, 0)",
+            "opacity": "1"
+          },
+          "hover": null,
+          "active": null,
+          "focus": {
+            "outline": "1px dashed var(--color-blue)"
+          }
+        },
+        "fontWeight": "400",
+        "fontSize": "13.3333px",
+        "classes": "scroll-indicator black home-hero-scroll-indicator",
+        "confidence": "high"
+      }
+    ],
+    "inputs": {
+      "text": [],
+      "checkbox": [],
+      "radio": [],
+      "select": []
+    },
+    "links": [
+      {
+        "color": "rgb(15, 16, 18)",
+        "textDecoration": "none",
+        "fontWeight": "350",
+        "states": {
+          "default": {
+            "color": "rgb(15, 16, 18)",
+            "textDecoration": "none"
+          },
+          "hover": null
+        }
+      },
+      {
+        "color": "rgba(0, 0, 0, 0.4)",
+        "textDecoration": "none",
+        "fontWeight": "350",
+        "states": {
+          "default": {
+            "color": "rgba(0, 0, 0, 0.4)",
+            "textDecoration": "none"
+          },
+          "hover": {}
+        }
+      },
+      {
+        "color": "rgb(0, 113, 227)",
+        "textDecoration": "none",
+        "fontWeight": "350",
+        "states": {
+          "default": {
+            "color": "rgb(0, 113, 227)",
+            "textDecoration": "none"
+          },
+          "hover": {}
+        }
+      },
+      {
+        "color": "rgb(242, 242, 244)",
+        "textDecoration": "none",
+        "fontWeight": "350",
+        "states": {
+          "default": {
+            "color": "rgb(242, 242, 244)",
+            "textDecoration": "none"
+          },
+          "hover": {}
+        }
+      }
+    ],
+    "badges": {
+      "all": [
+        {
+          "backgroundColor": "rgba(0, 0, 0, 0)",
+          "color": "rgb(0, 113, 227)",
+          "padding": "2.1px 11px 3.6px",
+          "borderRadius": "54px",
+          "border": "1px solid rgb(0, 113, 227)",
+          "fontSize": "16px",
+          "fontWeight": "350",
+          "lineHeight": "19.2px",
+          "textTransform": "none",
+          "letterSpacing": "-0.32px",
+          "variant": "neutral",
+          "styleType": "outline",
+          "isRounded": true,
+          "classes": "pill blue",
+          "confidence": "high"
+        },
+        {
+          "backgroundColor": "rgb(0, 113, 227)",
+          "color": "rgb(255, 255, 255)",
+          "padding": "2.1px 11px 3.6px",
+          "borderRadius": "54px",
+          "border": "0px none rgb(255, 255, 255)",
+          "fontSize": "16px",
+          "fontWeight": "350",
+          "lineHeight": "19.2px",
+          "textTransform": "none",
+          "letterSpacing": "-0.32px",
+          "variant": "neutral",
+          "styleType": "filled",
+          "isRounded": true,
+          "classes": "pill blue filled",
+          "confidence": "high"
+        }
+      ],
+      "byVariant": {
+        "error": [],
+        "warning": [],
+        "success": [],
+        "info": [],
+        "neutral": [
+          {
+            "backgroundColor": "rgba(0, 0, 0, 0)",
+            "color": "rgb(0, 113, 227)",
+            "padding": "2.1px 11px 3.6px",
+            "borderRadius": "54px",
+            "border": "1px solid rgb(0, 113, 227)",
+            "fontSize": "16px",
+            "fontWeight": "350",
+            "lineHeight": "19.2px",
+            "textTransform": "none",
+            "letterSpacing": "-0.32px",
+            "variant": "neutral",
+            "styleType": "outline",
+            "isRounded": true,
+            "classes": "pill blue",
+            "confidence": "high"
+          },
+          {
+            "backgroundColor": "rgb(0, 113, 227)",
+            "color": "rgb(255, 255, 255)",
+            "padding": "2.1px 11px 3.6px",
+            "borderRadius": "54px",
+            "border": "0px none rgb(255, 255, 255)",
+            "fontSize": "16px",
+            "fontWeight": "350",
+            "lineHeight": "19.2px",
+            "textTransform": "none",
+            "letterSpacing": "-0.32px",
+            "variant": "neutral",
+            "styleType": "filled",
+            "isRounded": true,
+            "classes": "pill blue filled",
+            "confidence": "high"
+          }
+        ]
+      }
+    }
+  },
+  "breakpoints": [
+    {
+      "px": "833px"
+    },
+    {
+      "px": "834px"
+    },
+    {
+      "px": "1024px"
+    },
+    {
+      "px": "1440px"
+    }
+  ],
+  "iconSystem": [
+    {
+      "name": "SVG Icons",
+      "type": "svg"
+    }
+  ],
+  "frameworks": [
+    {
+      "name": "Fluent UI",
+      "confidence": "high",
+      "evidence": "45 Fluent components"
+    }
+  ]
+}
