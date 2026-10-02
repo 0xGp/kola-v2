@@ -81,6 +81,7 @@ function Sheet({ study, index, total }: { study: CaseStudy; index: number; total
       <Link href={href} className="sheet__figure" tabIndex={-1} aria-hidden="true">
         <Figure
           mock={study.mock}
+          image={study.image}
           label={`${study.sector} project preview`}
           annotations={study.annotations}
           placeholder={site.placeholder}

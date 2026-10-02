@@ -281,8 +281,81 @@ function PropertyMock() {
   );
 }
 
+const trips: [string, string, string, string, string, string][] = [
+  ["Trip 104", "Wheelchair · Aide", "WAV 03", "Aide assigned", "En route", "go"],
+  ["Trip 105", "Wheelchair", "WAV 01", "Not required", "Scheduled", "plan"],
+  ["Trip 106", "Walker · Aide", "Van 02", "Aide assigned", "Scheduled", "plan"],
+  ["Trip 107", "Wheelchair · Aide", "—", "Needs aide", "Unassigned", "warn"],
+  ["Trip 103", "Aide", "Van 04", "Aide assigned", "Completed", "done"],
+];
+
+function AssistMock() {
+  return (
+    <div className="mock m-assist">
+      <div className="ma-phone">
+        <div className="ma-screen">
+          <p className="ma-status">9:41</p>
+          <p className="ma-h">Book a trip</p>
+          <div className="ma-field">
+            <span>Pickup</span>
+            Home
+          </div>
+          <div className="ma-field">
+            <span>Destination</span>
+            Clinic · 10:30
+          </div>
+          <p className="ma-label">Mobility needs</p>
+          <p className="ma-chips">
+            <span className="on">Wheelchair</span>
+            <span className="on">Aide required</span>
+            <span>Walker</span>
+            <span>Companion</span>
+          </p>
+          <div className="ma-field ma-field--note">
+            <span>Notes for the aide</span>
+            Help needed at the entrance
+          </div>
+          <span className="ma-btn">Find vehicle and aide</span>
+        </div>
+      </div>
+      <div className="ma-board">
+        <div className="ma-top">
+          <p className="ma-h2">Today&apos;s trips</p>
+          <p className="ma-seg">
+            <span className="on">All</span>
+            <span>Scheduled</span>
+            <span>In progress</span>
+          </p>
+        </div>
+        <div className="ma-table">
+          <p className="ma-row ma-row--head">
+            <span>Trip</span>
+            <span>Needs</span>
+            <span>Vehicle</span>
+            <span>Aide</span>
+            <span>Status</span>
+          </p>
+          {trips.map(([trip, needs, vehicle, aide, status, tone]) => (
+            <p key={trip} className="ma-row">
+              <span>{trip}</span>
+              <span>{needs}</span>
+              <span>{vehicle}</span>
+              <span className={tone === "warn" ? "ma-warn" : undefined}>{aide}</span>
+              <span>
+                <i className={`ma-pill ma-pill--${tone}`}>{status}</i>
+              </span>
+            </p>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export function Mock({ id }: { id: MockId }) {
   switch (id) {
+    case "assist":
+      return <AssistMock />;
     case "property":
       return <PropertyMock />;
     case "dashboard":

@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { Figure } from "@/components/Figure";
 import { Reveal } from "@/components/Reveal";
 import { T } from "@/components/T";
-import { caseStudies, isPlaceholder, site } from "@/lib/content";
+import { caseStudies, isPlaceholder, paragraphs, site, type Text } from "@/lib/content";
 
 export function generateStaticParams() {
   return caseStudies.map((s) => ({ slug: s.slug }));
@@ -28,12 +28,25 @@ function Row({ label, children }: { label: string; children: React.ReactNode }) 
   );
 }
 
+function Paras({ text, leadFirst = false }: { text: Text; leadFirst?: boolean }) {
+  return (
+    <>
+      {paragraphs(text).map((p, k) => (
+        <p key={k} className={leadFirst && k === 0 ? "cs__lead" : undefined}>
+          <T>{p}</T>
+        </p>
+      ))}
+    </>
+  );
+}
+
 export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]">) {
   const { slug } = await params;
   const i = caseStudies.findIndex((s) => s.slug === slug);
   if (i === -1) notFound();
   const study = caseStudies[i];
   const next = caseStudies[(i + 1) % caseStudies.length];
+  const richProcess = study.process.some((p) => p.bullets || p.quote || p.flow || p.after);
 
   return (
     <article className="cs">
@@ -72,77 +85,131 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
       <Reveal className="cs__visual">
         <Figure
           mock={study.mock}
+          image={study.image}
           label={`${study.sector} project visual`}
           annotations={study.annotations}
           placeholder={site.placeholder}
+          priority
         />
       </Reveal>
 
       <div className="cs__body">
+        {study.overview && (
+          <Row label="Overview">
+            <Paras text={study.overview} leadFirst />
+            {study.areas && (
+              <div className="cs__areas">
+                <h3>Key product areas</h3>
+                <ul className="tags">
+                  {study.areas.map((a) => (
+                    <li key={a}>{a}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </Row>
+        )}
+
+        {study.decisions && (
+          <Row label="Key screens and decisions">
+            <ol className="cs__decisions">
+              {study.decisions.map((d, k) => (
+                <li key={d.title}>
+                  <span className="cs__num" aria-hidden="true">
+                    {k + 1}
+                  </span>
+                  <div>
+                    <h3>{d.title}</h3>
+                    <p>{d.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </Row>
+        )}
+
         <Row label="The problem">
-          <p className="cs__lead">
-            <T>{study.problem}</T>
-          </p>
+          <Paras text={study.problem} leadFirst />
         </Row>
 
         <Row label="Who it was for">
           <div className="cs__pair">
             <div>
               <h3>Founders</h3>
-              <p>
-                <T>{study.founders}</T>
-              </p>
+              <Paras text={study.founders} />
             </div>
             <div>
               <h3>Users</h3>
-              <p>
-                <T>{study.users}</T>
-              </p>
+              <Paras text={study.users} />
             </div>
           </div>
         </Row>
 
         <Row label="My role">
-          <p>
-            <T>{study.myRole}</T>
-          </p>
+          <Paras text={study.myRole} />
         </Row>
 
         <Row label="Process">
-          <ol className="cs__process">
+          <ol className={`cs__process${richProcess ? " cs__process--rich" : ""}`}>
             {study.process.map((p) => (
               <li key={p.title}>
                 <h3>{p.title}</h3>
-                <p>
-                  <T>{p.body}</T>
-                </p>
+                <Paras text={p.body} />
+                {p.bullets && (
+                  <ul className="cs__bullets">
+                    {p.bullets.map((b) => (
+                      <li key={b}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+                {p.quote && <blockquote className="cs__quote">{p.quote}</blockquote>}
+                {p.flow && (
+                  <ol className="cs__flow" aria-label="Core journey">
+                    {p.flow.map((f) => (
+                      <li key={f}>{f}</li>
+                    ))}
+                  </ol>
+                )}
+                {p.after && <Paras text={p.after} />}
               </li>
             ))}
           </ol>
         </Row>
 
         <Row label="Solution">
-          <p className="cs__lead">
-            <T>{study.solution}</T>
-          </p>
+          <Paras text={study.solution} leadFirst />
         </Row>
 
         <Row label="Outcome">
-          <ul className="cs__metrics">
-            {study.outcome.metrics.map((m, k) => (
-              <li key={k}>
-                <span className="cs__metric-value display">
-                  <T>{m.value}</T>
-                </span>
-                <span className="cs__metric-label">
-                  <T>{m.label}</T>
-                </span>
-              </li>
-            ))}
-          </ul>
-          <p>
-            <T>{study.outcome.qualitative}</T>
-          </p>
+          {study.outcome.metrics && (
+            <ul className="cs__metrics">
+              {study.outcome.metrics.map((m, k) => (
+                <li key={k}>
+                  <span className="cs__metric-value display">
+                    <T>{m.value}</T>
+                  </span>
+                  <span className="cs__metric-label">
+                    <T>{m.label}</T>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          )}
+          {study.outcome.items && (
+            <ul className="cs__outcomes">
+              {study.outcome.items.map((o) => (
+                <li key={o.title}>
+                  <h3>{o.title}</h3>
+                  <p>{o.body}</p>
+                </li>
+              ))}
+            </ul>
+          )}
+          {study.outcome.qualitative && (
+            <p>
+              <T>{study.outcome.qualitative}</T>
+            </p>
+          )}
         </Row>
 
         <Row label="What I learned">
@@ -152,9 +219,16 @@ export default async function CaseStudyPage({ params }: PageProps<"/work/[slug]"
                 <span className="mono" aria-hidden="true">
                   {String(k + 1).padStart(2, "0")}
                 </span>
-                <p>
-                  <T>{l}</T>
-                </p>
+                {typeof l === "string" ? (
+                  <p>
+                    <T>{l}</T>
+                  </p>
+                ) : (
+                  <div className="cs__lesson">
+                    <h3>{l.title}</h3>
+                    <Paras text={l.body} />
+                  </div>
+                )}
               </li>
             ))}
           </ol>

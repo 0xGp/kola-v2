@@ -42,6 +42,7 @@ export function Thinking() {
         {rest.map((n) => (
           <article key={n.topic} className="note-card">
             <p className="note-card__topic">{n.topic}</p>
+            {n.title && <h3 className="note-card__title">{n.title}</h3>}
             <p className="note-card__text">
               <T>{n.text}</T>
             </p>

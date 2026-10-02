@@ -1,25 +1,40 @@
+import Image from "next/image";
 import { Measure } from "./Measure";
 import { Mock } from "./Mocks";
-import type { Annotation, MockId } from "@/lib/content";
+import type { Annotation, MockId, Shot } from "@/lib/content";
 
 type FigureProps = {
   mock: MockId;
+  image?: Shot;
   label: string;
   annotations?: Annotation[];
   placeholder?: boolean;
+  priority?: boolean;
 };
 
-export function Figure({ mock, label, annotations = [], placeholder = false }: FigureProps) {
+export function Figure({ mock, image, label, annotations = [], placeholder = false, priority = false }: FigureProps) {
   return (
     <>
       <Measure axis="y" className="figure-measure">
         <Measure axis="x">
           <div className="figure-box">
-            <div className="frame" role="img" aria-label={label}>
+            <div className="frame" role="img" aria-label={image?.alt ?? label}>
               <div className="frame__inner" aria-hidden="true">
-                <Mock id={mock} />
+                {image ? (
+                  <Image
+                    className="mock mock--shot"
+                    src={image.src}
+                    alt=""
+                    width={image.width}
+                    height={image.height}
+                    sizes="(max-width: 900px) 100vw, 60vw"
+                    priority={priority}
+                  />
+                ) : (
+                  <Mock id={mock} />
+                )}
               </div>
-              {placeholder && <span className="frame__tag">Placeholder visual</span>}
+              {placeholder && !image && <span className="frame__tag">Placeholder visual</span>}
             </div>
             {annotations.map((a, i) => (
               <div
