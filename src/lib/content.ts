@@ -699,16 +699,53 @@ export type PlaygroundItem = {
   kind: string;
   ratio: string;
   mock?: MockId;
+  image?: { src: string; alt: string };
 };
 
 export const playground: PlaygroundItem[] = [
+  {
+    id: "sapphire-hero",
+    title: "Sapphire NFT marketplace",
+    kind: "Landing pages",
+    ratio: "1024 / 715",
+    image: {
+      src: "/playground/sapphire-hero.png",
+      alt: "Hero section of Sapphire, a dark NFT marketplace landing page with a featured artwork card and partner logos",
+    },
+  },
+  {
+    id: "tripointe-hero",
+    title: "Tri Pointe Homes",
+    kind: "Landing pages",
+    ratio: "1024 / 810",
+    image: {
+      src: "/playground/tripointe-hero.jpg",
+      alt: "Hero section of Tri Pointe Homes, a light real estate landing page with property photos and company stats",
+    },
+  },
+  {
+    id: "sapphire-full",
+    title: "Sapphire NFT marketplace, full page",
+    kind: "Landing pages",
+    ratio: "968 / 1024",
+    image: {
+      src: "/playground/sapphire-full.png",
+      alt: "Full Sapphire landing page showing hot drops, top creators, trending NFTs, testimonials and a how-it-works section",
+    },
+  },
+  {
+    id: "tripointe-full",
+    title: "Tri Pointe Homes, full page",
+    kind: "Landing pages",
+    ratio: "1024 / 882",
+    image: {
+      src: "/playground/tripointe-full.jpg",
+      alt: "Full Tri Pointe Homes landing page showing special offers, featured rentals, client testimonials and footer",
+    },
+  },
   { id: "p1", title: "[Dashboard concept]", kind: "Dashboard concepts", ratio: "16 / 10", mock: "dashboard" },
   { id: "p2", title: "[Mobile interface]", kind: "Mobile interfaces", ratio: "4 / 5", mock: "transit" },
-  { id: "p3", title: "[Landing page]", kind: "Landing pages", ratio: "3 / 4" },
   { id: "p4", title: "[Design system exploration]", kind: "UI explorations", ratio: "16 / 10", mock: "system" },
-  { id: "p5", title: "[Brand exploration]", kind: "Brand explorations", ratio: "1 / 1" },
-  { id: "p6", title: "[Micro-interaction]", kind: "Micro-interactions", ratio: "4 / 3" },
-  { id: "p7", title: "[Design experiment]", kind: "Design experiments", ratio: "3 / 4" },
 ];
 
 export const notes: { topic: string; title?: string; text: string }[] = [

@@ -1,17 +1,26 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Mock } from "./Mocks";
 import { T } from "./T";
 import { playground, type PlaygroundItem } from "@/lib/content";
 import { gsap, useGSAP, prefersReducedMotion, getLenis } from "@/lib/motion";
 
-function Visual({ item }: { item: PlaygroundItem }) {
+function Visual({ item, large = false }: { item: PlaygroundItem; large?: boolean }) {
   const [w, h] = item.ratio.split("/").map(Number);
   const style = { aspectRatio: item.ratio, "--r": w / h } as React.CSSProperties;
   return (
     <div className="pg__visual" style={style}>
-      {item.mock ? (
+      {item.image ? (
+        <Image
+          src={item.image.src}
+          alt={large ? item.image.alt : ""}
+          fill
+          sizes={large ? "90vw" : "(max-width: 760px) 80vw, 33vw"}
+          className="pg__img"
+        />
+      ) : item.mock ? (
         <div className="pg__mock" aria-hidden="true">
           <Mock id={item.mock} />
         </div>
@@ -157,7 +166,7 @@ export function Playground() {
               </button>
             </div>
             <div className="lb__stage">
-              <Visual item={current} />
+              <Visual item={current} large />
             </div>
             <div className="lb__nav">
               <button type="button" className="btn-ghost" onClick={() => step(-1)}>

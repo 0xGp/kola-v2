@@ -770,8 +770,16 @@
   background: var(--bg-raise);
   padding: 0.1rem 0.5rem;
 }
+.pg__img {
+  object-fit: cover;
+  transition: transform 0.9s var(--ease-out);
+}
+.lb__stage .pg__img {
+  object-fit: contain;
+}
 .pg__btn:hover .pg__mock,
-.pg__btn:hover .pg__empty {
+.pg__btn:hover .pg__empty,
+.pg__btn:hover .pg__img {
   transform: scale(1.03);
 }
 .pg__meta {
@@ -1561,7 +1569,8 @@
     overflow-x: auto;
     gap: 1rem;
     scroll-snap-type: x mandatory;
-    padding-bottom: 1rem;
+    scroll-padding-inline: var(--gutter);
+    padding: 0 var(--gutter) 1rem;
     scrollbar-width: none;
   }
   .pg__item {
@@ -1652,7 +1661,8 @@
   }
   .sheet__figure:hover .mock,
   .pg__btn:hover .pg__mock,
-  .pg__btn:hover .pg__empty {
+  .pg__btn:hover .pg__empty,
+  .pg__btn:hover .pg__img {
     transform: none;
   }
 }
